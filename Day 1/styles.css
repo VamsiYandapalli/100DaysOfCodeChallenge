@@ -1,0 +1,21 @@
+/* h1 {
+  text-align: center;
+  margin: 20% 25% 50% 24%;
+  font-family: "Courier New", Courier, monospace;
+} */
+
+body {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.highlightH1 {
+  background-color: rgb(182, 205, 50);
+}
