@@ -1,5 +1,118 @@
 console.log("Hello World!");
 
+//FUNCTIONS
+//Function Declaration - HOISTED
+function addTwoNum(num1, num2) {
+  return num1 + num2;
+}
+
+let total = addTwoNum(10, 11);
+console.log(total);
+
+//using function as a variable
+console.log("The total of 20 and 20 is " + addTwoNum(20, 20));
+
+//Function Expression -Not HOISTED
+let multiplyNum = function (num1, num2) {
+  return num1 * num2;
+};
+
+console.log(multiplyNum(2, 3));
+
+//Arrow Functions -
+let greet = (name) => `Hello, How are you ${name}`;
+console.log(greet("Vamsi"));
+
+//Anonymous Functions
+setTimeout(function () {
+  console.log("This function executed after 4 seconds");
+}, 4000);
+
+//Immediatly Invoked Function - Invokes immediatly
+(function () {
+  console.log("This is an IIFE");
+})();
+//Control Structures
+//if
+let n = 10;
+if (n != 10) {
+  console.log("n is not equals to 10");
+}
+
+//if-else
+let personAge = 16;
+if (personAge > 18) {
+  console.log("Major");
+} else {
+  console.log("Minor");
+}
+
+//else-if
+let time = 5;
+if (time < 12) {
+  console.log("Morning");
+} else if (time == 12) {
+  console.log("Noon");
+} else {
+  console.log("Evening or Night");
+}
+
+// Switch Statement
+let dayNum = 2;
+switch (dayNum) {
+  case 1:
+    day = "Monday";
+    console.log(day);
+    break;
+  case 2:
+  // day = "Tuesday";
+  // console.log(day);
+  // break;
+  case 3:
+    day = "Tuesday,Wednesday";
+    console.log(day);
+    break;
+  case 4:
+    day = "Thursday";
+    console.log(day);
+    break;
+  case 5:
+    day = "Friday";
+    console.log(day);
+    break;
+  case 6:
+    day = "Saturday";
+    console.log(day);
+    break;
+  default:
+    day = "Sunday";
+    console.log(day);
+    break;
+}
+
+//for loop - executes untill the condition becomes false
+for (let i = 1; i < 22; i++) {
+  console.log(i);
+}
+
+// while loop - executes untill the condition becomes false
+let i = 1;
+while (i < 22) {
+  console.log(i);
+  i++;
+}
+
+//do-while loop
+// let number;
+// do {
+//   number = parseInt(prompt("Enter a number less than 21."));
+//   if (number > 21) {
+//     alert(`You entered ${number}, please enter number less than 21`);
+//   }
+// } while (number >= 21 || isNaN(number));
+
+// console.log("You entered ", number);
+
 //Operators
 //Arithmatic Operators
 let a = 10,
@@ -20,6 +133,35 @@ g += 11; //21 //Addition Assignment Operator
 g -= 1; //20; //Substration Assignment Operator
 // *=,/=, %= and **= Assignment Operators
 console.log(g);
+
+//Comparision Operators
+let d = 20;
+let e = 25;
+
+let equalsTo = d == e; //false
+let equalValueandType = d === e; //false
+let greaterThan = e > d; //True
+let lessThan = d < e; //True
+let notEqualsTo = d != e; //True
+//Similiarly there are >=,<= greaterthan or equalts to and Lessthan on Equals to
+let ternaryOp = d < e ? "D is less than E" : "E is less than D"; //Ternary Operator
+console.log(ternaryOp);
+
+let text1 = "A";
+let text2 = "B";
+console.log(text1 < text2);
+console.log(text1 > text2);
+console.log(text1 + text2); //Concatenation
+console.log(5 + 5 + text1); //10A
+console.log("5" + text2); //5B
+
+//Logical Operators - &&-Logical AND, ||-Logical OR and !- Logical NOT
+let employed = true;
+let married = true;
+
+employed && married
+  ? console.log("Issue Credit Card")
+  : console.log("No Credit card");
 
 //Types of Variables and Data Types
 
